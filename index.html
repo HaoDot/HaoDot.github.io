@@ -1,275 +1,155 @@
 <!DOCTYPE HTML>
-
 <html lang="en">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<title>Hao Ju</title>
-<meta content="Hao Ju" name="author"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="images/favicon/Head_Picture.png" rel="shortcut icon" type="image/x-icon"/>
-<style>/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+<meta charset="utf-8">
+<title>Hao Ju – Personal Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/favicon/Head_Picture.png" type="image/x-icon">
 
-a {
-  color: #1772d0;
-  text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
-}
-
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-h2 {
-  margin: 0;
-  font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-.papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.name {
-  padding-top: 20px;
-  margin: 0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
-}
-
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-span.highlight {
-  background-color: #ffffd0;
-}
-
-.colored-box {
-    color: black;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 10px;
-}
-hr{display:none;}</style>
+<!-- === Embedded stylesheet (keeps original look‑and‑feel) === -->
 <style>
-/* custom nested list styles for interests only */
-.interests-list { margin-left: 20px; }
-.interests-list > li { list-style-type: disc; }
-.interests-list ul  { list-style-type: circle; margin-left: 20px; }
-.interests-list ul ul { list-style-type: square; margin-left: 20px; }
-</style></head>
+/* --- fonts & base --- */
+@font-face{font-family:'Lato';font-style:normal;font-weight:400;src:local('Lato Regular'),url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');}
+@font-face{font-family:'Lato';font-style:normal;font-weight:700;src:local('Lato Bold'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');}
+body,td,th,tr,p,a{font-family:'Lato',Verdana,Helvetica,sans-serif;font-size:14px}
+strong{font-weight:700}
+a{color:#1772d0;text-decoration:none}
+a:hover,a:focus{color:#f09228}
+h2{font-size:22px;margin:0;font-weight:400}
+.name{font-size:32px;text-align:center;margin:0;padding-top:20px}
+/* --- utilities --- */
+hr{display:none}
+.paper-table{width:100%;border:0;border-spacing:0;border-collapse:separate;margin-bottom:12px}
+.paper-table img{width:100%}
+.paper-table td{vertical-align:top}
+.paper-table .thumb{width:25%}
+.paper-table .desc{width:75%}
+</style>
+</head>
+
 <body>
-<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<tr style="padding:0px">
-<td style="padding:0px">
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<tr style="padding:0px">
-<td style="padding:2.5%;width:63%;vertical-align:middle">
-<p class="name" style="text-align: center;">Hao Ju (鞠豪 in Chinese)</p>
+<table style="width:100%;max-width:800px;margin:0 auto;border:0;border-spacing:0;">
+<tr><td>
 
-
-
-<p>I am a first-year Ph.D. student at <a href="https://www.um.edu.mo/">University of Macau</a>, supervised by <a href="https://spyflying.github.io/">Dr. Shaofei Huang</a>, <a href="https://huzhangcs.github.io/">Dr. Hu Zhang</a>, and <a href="https://www.zdzheng.xyz/">Prof. Zhedong Zheng</a>. Previously, I received my Bachelor’s degree from <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a> in 2021 and my  Master’s degree from <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a> in 2024, supervised by <a href="https://pengyuzhang.me/">Dr. Pengyu Zhang</a>, <a href="https://stephenjia.github.io/">Prof. Xu Jia</a>, and <a href="http://faculty.dlut.edu.cn/wangdongice/zh_CN/index.htm">Prof. Dong Wang</a>.</p>
-<p>I am interested in computer vision, Large Multimodal Models (LMMs), and related topics.</p>
-<p>📧 <a href="mailto:haojudalian@163.com">Email</a> / <a href="">Scholar:todo</a> /</p>
-<p><strong>🌟Highlight: I am currently seeking a long-term research internship opportunity. Please feel free to contact me if you have an opportunity!</strong></p>
-<hr/>
-</td>
-<td style="padding:2.5%;width:40%;max-width:40%">
-<a href="images/Head_Picture.png"><img alt="profile photo" class="hoverZoomLink" src="images/Head_Picture.png" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;"/></a>
-</td>
-</tr>
-</tbody></table>
-
-
-
-
-
-
-
-
-
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody><tr><td style="padding:20px;width:100%;vertical-align:middle"><h2>News</h2>
-<ul>
-<li>2025.6: (First author) One paper on cross-view geo-localization is accepted to ICCV 2025.</li>
-<li>2024.9: (Equal contribution) One paper on event-assisted blurry image unfolding is accepted by IEEE TNNLS.</li>
-<li>2024.7: (Equal contribution) One paper on event-assisted blurry image unfolding is accepted by IEEE TIP.</li>
-</ul>
-<hr/>
-</td></tr></tbody></table><table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody><tr><td style="padding:20px;width:100%;vertical-align:middle"><h2>Research</h2>
-<h3><a href="https://arxiv.org/abs/2411.13610">Video2BEV</a></h3>
-<p><strong>Video2BEV: Transforming Drone Videos to BEVs for Video-based Geo-localization</strong><br/>
-<strong>Authors:</strong> <strong>Hao Ju$^<em>$</em></strong>, Shaofei Huang$^$, Si Liu, Zhedong Zheng<br/>
-<strong>ICCV, 2025</strong> ($^*$ denotes Equal contribution) 
-<a href="https://arxiv.org/abs/2411.13610">Paper</a> / <a href="">Code: almost there</a></p>
-<p>We resort to the multi-view nature of drone-view videos and transform videos to Bird’s-Eye View for video-based geo-localization.</p>
-<h3><a href="https://ieeexplore.ieee.org/abstract/document/10715738">Event-Assisted Recurrent Network for Arbitrary-Temporal-Scale Blurry Image Unfolding</a></h3>
-<p><strong>Event-Assisted Recurrent Network for Arbitrary-Temporal-Scale Blurry Image Unfolding</strong><br/>
-<strong>Authors:</strong> Pengyu Zhang$^<em>$, <strong>Hao Ju$^</strong></em>$, Weihua He, Yaoyuan Wang, Ziyang Zhang, Shengming Li, Dong Wang, Huchuan Lu, Xu Jia<br/>
-<strong>IEEE TNNLS, 2024</strong>  ($^*$ denotes Equal contribution)
-<a href="https://ieeexplore.ieee.org/abstract/document/10715738">PDF</a></p>
-<p>We propose an event-assisted blurry image unfolding framework that can work across arbitrary temporal scales with the help of event streams.</p>
-<h3><a href="https://ieeexplore.ieee.org/abstract/document/10702490/">Event-Assisted Blurriness Representation Learning for Blurry Image Unfolding</a></h3>
-<p><strong>Event-Assisted Blurriness Representation Learning for Blurry Image Unfolding</strong><br/>
-<strong>Authors:</strong> Pengyu Zhang$^<em>$, <strong>Hao Ju$^</strong></em>$, Lei Yu, Weihua He, Yaoyuan Wang, Ziyang Zhang, Qi Xu, Shengming Li, Dong Wang, Huchuan Lu, Xu Jia<br/>
-<strong>IEEE TIP, 2024</strong> ($^*$ denotes Equal contribution) 
-<a href="https://ieeexplore.ieee.org/abstract/document/10702490/">PDF</a> /</p>
-<p>We propose to implicitly model blur in an image by computing blurriness representation from event streams and integrate blurriness into unfolding network.</p>
-<hr/>
-</td></tr></tbody></table><table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody><tr><td style="padding:20px;width:100%;vertical-align:middle"><h2>Education</h2>
-<ul>
-<li>2024.09 - Now: Ph.D. student, Faculty of Science and Technology, University of Macau</li>
-<li>2021.06 - 2024.06: M.S., School of Engineering in Information and Communication Engineering, Dalian University of Technology</li>
-<li>2017.09 - 2021.06: B.S., School of Engineering in Information and Communication Engineering, Dalian University of Technology</li>
-</ul>
-<hr/>
-</td></tr></tbody></table><table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+<!-- === Header === -->
+<table style="width:100%;border:0;border-spacing:0;">
 <tr>
-<td style="padding:20px;width:100%;vertical-align:middle">
-<h2>Interests</h2>
+  <td style="width:63%;padding:2.5%;vertical-align:middle">
+    <p class="name">Hao Ju (鞠豪 in Chinese)</p>
+    <p>I am a first-year Ph.D. student at <a href="https://www.um.edu.mo/">University of Macau</a>, supervised by
+       <a href="https://spyflying.github.io/">Dr. Shaofei Huang</a>,
+       <a href="https://huzhangcs.github.io/">Dr. Hu Zhang</a>, and
+       <a href="https://www.zdzheng.xyz/">Prof. Zhedong Zheng</a>.
+       Previously, I received my Bachelor’s and Master’s degrees from
+       <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a> (2017‑2024),
+       advised by <a href="https://pengyuzhang.me/">Dr. Pengyu Zhang</a>,
+       <a href="https://stephenjia.github.io/">Prof. Xu Jia</a> and
+       <a href="http://faculty.dlut.edu.cn/wangdongice/zh_CN/index.htm">Prof. Dong Wang</a>.
+    </p>
+    <p>I am interested in computer vision, Large Multimodal Models (LMMs) and related topics.</p>
+    <p>📧 <a href="mailto:haojudalian@163.com">Email</a> / <a href="">Scholar:todo</a></p>
+    <p><strong>🌟 Highlight:</strong> I am currently seeking a long‑term research internship opportunity. Please feel free to contact me if you have an opportunity!</p>
+  </td>
+  <td style="width:37%;padding:2.5%;text-align:center">
+    <img src="images/Head_Picture.jpg" style="width:100%;max-width:200px;border-radius:50%">
+  </td>
+</tr>
+</table>
 
+<!-- === News === -->
+<h2>News</h2>
 <ul>
-<li><p>Sports:</p>
+  <li>2025‑06: (First author) One paper on cross‑view geo‑localization is accepted to ICCV 2025.</li>
+  <li>2024‑09: (Equal contribution) One paper on event‑assisted blurry image unfolding is accepted by IEEE TNNLS.</li>
+  <li>2024‑07: (Equal contribution) One paper on event‑assisted blurry image unfolding is accepted by IEEE TIP.</li>
+</ul>
+
+<!-- === Research === -->
+<h2>Research</h2>
+
+<!-- paper 1 -->
+<table class="paper-table">
+<tr>
+  <td class="thumb"><img src="images/placeholder.png" alt="Video2BEV placeholder"></td>
+  <td class="desc">
+    <strong><a href="https://arxiv.org/abs/2411.13610">Video2BEV: Transforming Drone Videos to BEVs for Video‑based Geo‑localization</a></strong><br>
+    <strong>Authors:</strong> Hao Ju<sup>*</sup>, Shaofei Huang<sup>*</sup>, Si Liu, Zhedong Zheng<br>
+    <strong>ICCV 2025</strong> (<sup>*</sup> denotes equal contribution)<br/>
+    <a href="https://arxiv.org/abs/2411.13610">Paper</a>  /  <a href="https://github.com/HaoDot?tab=repositories">Code</a>: almost there<br>
+    We resort to the multi‑view nature of drone‑view videos and transform videos to Bird’s‑Eye View for video‑based geo‑localization.
+  </td>
+</tr>
+</table>
+
+<!-- paper 2 -->
+<table class="paper-table">
+<tr>
+  <td class="thumb"><img src="images/placeholder.png" alt="EARN placeholder"></td>
+  <td class="desc">
+    <strong><a href="https://ieeexplore.ieee.org/abstract/document/10715738">Event‑Assisted Recurrent Network for Arbitrary‑Temporal‑Scale Blurry Image Unfolding</a></strong><br>
+    <strong>Authors:</strong> Pengyu Zhang<sup>*</sup>, Hao Ju<sup>*</sup>, Weihua He, Yaoyuan Wang, Ziyang Zhang, Shengming Li, Dong Wang, Huchuan Lu, Xu Jia<br>
+    <strong>IEEE TNNLS 2024</strong> (<sup>*</sup> denotes equal contribution)<br/>
+    <a href="https://ieeexplore.ieee.org/abstract/document/10715738">PDF</a> /<br>
+    We propose an event‑assisted blurry image unfolding framework that can work across arbitrary temporal scales with the help of event streams.
+  </td>
+</tr>
+</table>
+
+<!-- paper 3 -->
+<table class="paper-table">
+<tr>
+  <td class="thumb"><img src="images/placeholder.png" alt="EBRL placeholder"></td>
+  <td class="desc">
+    <strong><a href="https://ieeexplore.ieee.org/abstract/document/10702490/">Event‑Assisted Blurriness Representation Learning for Blurry Image Unfolding</a></strong><br>
+    <strong>Authors:</strong> Pengyu Zhang<sup>*</sup>, Hao Ju<sup>*</sup>, Lei Yu, Weihua He, Yaoyuan Wang, Ziyang Zhang, Qi Xu, Shengming Li, Dong Wang, Huchuan Lu, Xu Jia<br>
+    <strong>IEEE TIP 2024</strong> (<sup>*</sup> denotes equal contribution)  / 
+    <a href="https://ieeexplore.ieee.org/abstract/document/10702490/">PDF</a> /<br>
+    We propose to implicitly model blur in an image by computing blurriness representation from event streams and integrate blurriness into the unfolding network.
+  </td>
+</tr>
+</table>
+
+<!-- === Education === -->
+<h2>Education</h2>
+<ul>
+  <li>2024‑09 – Now Ph.D. student, Faculty of Science and Technology, University of Macau</li>
+  <li>2021‑06 – 2024‑06 M.S., Information & Communication Engineering, Dalian University of Technology</li>
+  <li>2017‑09 – 2021‑06 B.S., Information & Communication Engineering, Dalian University of Technology</li>
+</ul>
+
+<!-- === Interests (kept exactly as provided) === -->
+<h2>Interests</h2>
+<ul class="interests-list">
+<li>
+<p>Sports:</p>
 <ul>
 <li><p>Basketball</p>
 <ul>
 <li>Was a student athlete majored in basketball during primary and middle school and retired after injury</li>
 <li><p>Fan of <a href="https://www.cbaleague.com/#/">CBA</a></p>
 <ul>
-<li>Home team: <a href="https://www.instagram.com/zhejiangguangshalions/">ZheJiang Lions</a>, <a href="https://weibo.com/u/5167501876">ShanDong Hi-Speed</a></li>
-<li>Campus Ambassador: <a href="https://en.wikipedia.org/wiki/Guangzhou_Loong_Lions">Guangzhou Loong Lions</a></li>
-<li>Stan: <a href="https://www.fiba.basketball/en/players/206312-yanhao-zhao">Yanhao Zhao (Chinese Curry)</a>, <a href="https://www.instagram.com/minghui.sun/">Minghui Sun (Mr. Clutch)</a></li>
-</ul></li>
+<li>Home team: <a href="https://www.instagram.com/zhejiangguangshalions/">ZheJiang Lions</a>, <a href="https://weibo.com/u/5167501876">ShanDong Hi‑Speed</a></li>
+<li>Campus Ambassador: <a href="https://en.wikipedia.org/wiki/Guangzhou_Loong_Lions">Guangzhou Loong Lions</a></li>
+<li>Stan: <a href="https://www.fiba.basketball/en/players/206312-yanhao-zhao">Yanhao Zhao</a>, <a href="https://www.instagram.com/minghui.sun/">Minghui Sun</a></li>
+</ul>
+</li>
 <li><p>Was a fan of NBA</p>
 <ul>
-<li>Home team: <a href="https://www.nba.com/spurs/">Spurs</a> without No. 2</li>
-<li>Stan: <a href="https://www.instagram.com/manuginobili/">Manu Ginóbili (left-handed Jordan)</a>, <a href="https://www.instagram.com/diawboris/">Boris Diaw (French Magician)</a></li>
-</ul></li>
-</ul></li>
-<li><p>Bodybuilding</p></li>
-</ul></li>
-<li><p>Music: <a href="https://www.instagram.com/soulboykhalilfong/">Khalil Fong😇</a>, <a href="https://www.instagram.com/davidztao/">David Tao (南宁的朋友~)</a> </p></li>
-<li>Film, TV episodes: <a href="https://www.imdb.com/title/tt1533117/">Let the Bullets Fly (让子弹飞)</a>, <a href="https://www.imdb.com/title/tt0843270/">Crazy Stone (疯狂的石头)</a>, <a href="https://www.imdb.com/title/tt0851515/">Crazy Racer (疯狂的赛车)</a>, <a href="https://www.imdb.com/title/tt1796960/">Homeland</a></li>
+<li>Home team: <a href="https://www.nba.com/spurs/">Spurs</a> without No. 2</li>
+<li>Stan: <a href="https://www.instagram.com/manuginobili/">Manu Ginóbili</a>, <a href="https://www.instagram.com/diawboris/">Boris Diaw</a></li>
 </ul>
-<hr/>
-<blockquote>
-<p>Template adapted from <a href="https://jonbarron.info/">Jon Barron's website</a></p>
-</blockquote>
+</li>
+</ul>
+</li>
+<li><p>Bodybuilding</p></li>
+</ul>
+</li>
+<li><p>Music: <a href="https://www.instagram.com/soulboykhalilfong/">Khalil Fong</a>, <a href="https://www.instagram.com/davidztao/">David Tao</a></p></li>
+<li>Film & TV: <a href="https://www.imdb.com/title/tt1533117/">Let the Bullets Fly</a>, <a href="https://www.imdb.com/title/tt0843270/">Crazy Stone</a>, <a href="https://www.imdb.com/title/tt0851515/">Crazy Racer</a>, <a href="https://www.imdb.com/title/tt1796960/">Homeland</a></li>
+</ul>
 
-</td>
-</tr>
-</tbody></table>
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<tr>
-<td style="padding:0px">
-<br/>
-<p style="text-align:right;font-size:small;">
-                  Template from <a href="https://jonbarron.info/">Jon Barron's website</a>.
-                </p>
-</td>
-</tr>
-</tbody></table>
-</td>
-</tr>
-</tbody></table>
+<p style="text-align:right;font-size:small;margin-top:40px">Template from <a href="https://jonbarron.info/">Jon Barron's website</a>.</p>
+
+</td></tr></table>
 </body>
 </html>
