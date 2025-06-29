@@ -149,8 +149,24 @@ hr{display:none}
 <li>Film & TV: <a href="https://www.imdb.com/title/tt1533117/">Let the Bullets Fly</a>, <a href="https://www.imdb.com/title/tt0843270/">Crazy Stone</a>, <a href="https://www.imdb.com/title/tt0851515/">Crazy Racer</a>, <a href="https://www.imdb.com/title/tt1796960/">Homeland</a></li>
 </ul>
 
+<div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:40px">
+  <video src="images/dribbling.mp4" autoplay loop muted playsinline style="width:48%;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.2)"></video>
+  <video src="images/catch_shoot.mp4" autoplay loop muted playsinline style="width:48%;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.2)"></video>
+</div>
+
+
 <p style="text-align:right;font-size:small;margin-top:40px">Template from <a href="https://jonbarron.info/">Jon Barron's website</a>.</p>
 
 </td></tr></table>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('video').forEach(function (vid) {
+          vid.addEventListener('ended', function () {
+            vid.currentTime = 0;
+            vid.play();
+          });
+        });
+      });
+    </script>
 </body>
 </html>
