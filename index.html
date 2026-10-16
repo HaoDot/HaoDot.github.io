@@ -24,6 +24,16 @@ hr{display:none}
 .paper-table td{vertical-align:top}
 .paper-table .thumb{width:25%}
 .paper-table .desc{width:75%}
+.thumb-video-btn{display:block;width:100%;padding:0;margin:0;border:0;background:transparent;cursor:pointer;line-height:0}
+.video-modal{display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;background:rgba(0,0,0,.72);padding:24px;box-sizing:border-box}
+.video-modal.is-open{display:flex}
+.video-modal-dialog{position:relative;width:min(920px,100%);background:#111;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.45);overflow:hidden}
+.video-modal-dialog video{display:block;width:100%;max-height:80vh;background:#000}
+.video-modal-close{position:absolute;top:8px;right:10px;z-index:1;width:32px;height:32px;border:0;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:20px;line-height:32px;cursor:pointer}
+.video-modal-close:hover{background:rgba(0,0,0,.8)}
+.demo-hint{font-size:12px;color:#555;display:inline-flex;align-items:center;gap:6px}
+.demo-hint-arrow{display:inline-flex;flex-shrink:0;width:14px;height:14px;color:#555}
+.demo-hint-arrow svg{display:block;width:100%;height:100%}
 </style>
 </head>
 
@@ -36,7 +46,7 @@ hr{display:none}
 <tr>
   <td style="width:63%;padding:2.5%;vertical-align:middle">
     <p class="name">Hao Ju (鞠豪 in Chinese)</p>
-    <p>I am a <del>first-year</del> second-year Ph.D. student at <a href="https://www.um.edu.mo/">University of Macau</a>, supervised by
+    <p>I am a <del>first-year</del> <del>second-year</del> third-year Ph.D. student at <a href="https://www.um.edu.mo/">University of Macau</a>, supervised by
        <a href="https://spyflying.github.io/">Dr. Shaofei Huang</a>,
        <a href="https://huzhangcs.github.io/">Dr. Hu Zhang</a>, and
        <a href="https://www.zdzheng.xyz/">Prof. Zhedong Zheng</a>.
@@ -68,6 +78,44 @@ hr{display:none}
 
 <!-- === Research === -->
 <h2>Research</h2>
+
+<!-- paper 6 -->
+<table class="paper-table">
+<tr>
+  <td class="thumb">
+    <button type="button" class="thumb-video-btn" data-video="images/mustmm_demo.mp4" aria-label="Play MuSTMM demo video" title="Watch demo">
+      <img src="images/mustmm_underreview.png" alt="MuSTMM teaser">
+    </button>
+  </td>
+  <td class="desc">
+    <strong><a href="https://arxiv.org/abs/2610.21429">MuSTMM: Learning Sound-Triggered Mobile Manipulation across Multiple Scenes</a></strong><br>
+    <i>Authors:</i> <span style="font-weight: bold; text-decoration: underline;">Hao Ju<sup>*</sup></span>, Feng Yan<sup>*</sup>, Zhihao Zhong, Heng Yang, Shaofei Huang, Zhedong Zheng<br>
+    <strong>Under Review</strong> (<sup>*</sup> denotes equal contribution)<br/>
+    <span class="demo-hint"><span class="demo-hint-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></span>Click the image on the left for a video demo. (Headphones recommended)</span><br/>
+    <a href="https://arxiv.org/abs/2610.21429">Paper</a>  /<br>
+    We introduce MuSTMM, a multi-scene STMM benchmark, and augment sound navigation with explicit spatial memory for unseen scenes.
+  </td>
+</tr>
+</table>
+
+<!-- paper 5 -->
+<table class="paper-table">
+<tr>
+  <td class="thumb">
+    <button type="button" class="thumb-video-btn" data-video="images/stmm_demo.mp4" aria-label="Play STMM demo video" title="Watch demo">
+      <img src="images/stmm_underreview.png" alt="STMM motivation">
+    </button>
+  </td>
+  <td class="desc">
+    <strong><a href="https://arxiv.org/abs/2601.21667">From Instruction to Event: Sound-Triggered Mobile Manipulation</a></strong><br>
+    <i>Authors:</i> <span style="font-weight: bold; text-decoration: underline;">Hao Ju</span>, Shaofei Huang, Hongyu Li, Zihan Ding, Si Liu, Meng Wang, Zhedong Zheng<br>
+    <strong>Under Review</strong><br/>
+    <span class="demo-hint"><span class="demo-hint-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></span>Click the image on the left for a video demo. (Headphones recommended)</span><br/>
+    <a href="https://arxiv.org/abs/2601.21667">Paper</a>  /<br>
+    Instruction-following alone is not enough. We propose a paradigm shift to event-triggered robots that ground sound events and respond autonomously.
+  </td>
+</tr>
+</table>
 
 <!-- paper 4 -->
 <table class="paper-table">
@@ -201,14 +249,66 @@ hr{display:none}
 <p style="text-align:right;font-size:small;margin-top:40px">Template from <a href="https://jonbarron.info/">Jon Barron's website</a>.</p>
 
 </td></tr></table>
+
+<div class="video-modal" id="paper-demo-modal" role="dialog" aria-modal="true" aria-label="Paper demo video" hidden>
+  <div class="video-modal-dialog">
+    <button type="button" class="video-modal-close" id="paper-demo-close" aria-label="Close">&times;</button>
+    <video id="paper-demo-video" controls playsinline preload="metadata"></video>
+  </div>
+</div>
+
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        document.querySelectorAll('video').forEach(function (vid) {
+        document.querySelectorAll('video:not(#paper-demo-video)').forEach(function (vid) {
           vid.addEventListener('ended', function () {
             vid.currentTime = 0;
             vid.play();
           });
         });
+
+        var modal = document.getElementById('paper-demo-modal');
+        var closeBtn = document.getElementById('paper-demo-close');
+        var demoVideo = document.getElementById('paper-demo-video');
+
+        function openPaperDemo(src) {
+          if (demoVideo.getAttribute('src') !== src) {
+            demoVideo.setAttribute('src', src);
+            demoVideo.load();
+          }
+          modal.hidden = false;
+          modal.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+          var playPromise = demoVideo.play();
+          if (playPromise && typeof playPromise.catch === 'function') {
+            playPromise.catch(function () {});
+          }
+        }
+
+        function closePaperDemo() {
+          modal.classList.remove('is-open');
+          modal.hidden = true;
+          document.body.style.overflow = '';
+          demoVideo.pause();
+          demoVideo.currentTime = 0;
+        }
+
+        if (modal && closeBtn && demoVideo) {
+          document.querySelectorAll('.thumb-video-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              var src = btn.getAttribute('data-video');
+              if (src) openPaperDemo(src);
+            });
+          });
+          closeBtn.addEventListener('click', closePaperDemo);
+          modal.addEventListener('click', function (e) {
+            if (e.target === modal) closePaperDemo();
+          });
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+              closePaperDemo();
+            }
+          });
+        }
       });
     </script>
 </body>
